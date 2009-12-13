@@ -49,6 +49,10 @@ module MongoMapper
         @target.nil?
       end
       
+      def !
+        !!nil?
+      end
+      
       protected
         def method_missing(method, *args, &block)
           if load_target
